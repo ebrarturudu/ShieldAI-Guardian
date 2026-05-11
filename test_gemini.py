@@ -8,7 +8,7 @@ load_dotenv()
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
 # 1. Resmi bilgisayardan oku
-img = Image.open(r"C:/Users/ebrar/OneDrive/Desktop/ShieldAI-Guardian/test_image.png")
+img = Image.open("test_image.png")
 
 # 2. Gemini'ye hem yazı hem resim gönder
 response = client.models.generate_content(
