@@ -32,22 +32,24 @@ Projeyi yerel ortamınızda ayağa kaldırmak ve test etmek için aşağıdaki a
 Öncelikle sanal ortamınızı (`venv`) aktif hale getirin ve gerekli kütüphaneleri yükleyin:
 ```bash
 pip install -r requirements.txt
+```
+## 2. Ortam Değişkenlerinin Yapılandırılması
+Projenin kök dizininde bulunan `.env.example` dosyasının adını `.env` olarak değiştirin ve içerisine kendi `Gemini API anahtarınızı` tanımlayın:
 
-2. Ortam Değişkenlerinin Yapılandırılması
-Projenin kök dizininde bulunan .env.example dosyasının adını .env olarak değiştirin ve içerisine kendi Gemini API anahtarınızı tanımlayın:
 
-Plaintext
-GOOGLE_API_KEY=BURAYA_GEMINI_API_KEYINIZI_YAZIN
+`GOOGLE_API_KEY=BURAYA_GEMINI_API_KEYINIZI_YAZIN`
 (Güvenlik protokolleri gereği orijinal .env dosyası repoya dahil edilmemiştir).
 
-3. Toplu Test Sürecinin Başlatılması (Automated Test Suite)
+## 3. Toplu Test Sürecinin Başlatılması (Automated Test Suite)
 Sistemin sektörel senaryolar üzerindeki doğruluğunu ve başarı yüzdesini (Accuracy) incelemek için test suite scriptini çalıştırabilirsiniz:
 
-Bash
+```bash
 python test_runner.py
-4. Web Dashboard Arayüzünün Başlatılması
-Kullanıcı dostu siber güvenlik panelini tarayıcınızda görüntülemek için Flask uygulamasını başlatın:
+```
+## 4. Web Dashboard Arayüzünün Başlatılması
+Kullanıcı dostu siber güvenlik panelini tarayıcınızda görüntülemek için `Flask` uygulamasını başlatın:
 
-Bash
+```bash
 python app.py
-Uygulama başlatıldıktan sonra tarayıcınızdan http://127.0.0.1:5000 adresine giderek arayüze erişebilirsiniz.
+```
+Uygulama başlatıldıktan sonra tarayıcınızdan `http://127.0.0.1:5000` adresine giderek arayüze erişebilirsiniz.
