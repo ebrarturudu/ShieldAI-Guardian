@@ -1,0 +1,251 @@
+2026-05-19 18:44:15,884 [INFO] ShieldAI_Core: --- ShieldAI Toplu Test Suite ve Denetim Süreci Başlatıldı ---
+2026-05-19 18:44:15,885 [INFO] ShieldAI_Core: Sektörel [CLEAN] Senaryoları Test Ediliyor... (Hedef: GÜVENLİK RİSKİ YOK)
+2026-05-19 18:44:15,885 [INFO] ShieldAI_Core: Kanıt İnceleniyor: temiz1.png
+2026-05-19 18:44:15,901 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:18,404 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 18:44:18,407 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (temiz1.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:18,909 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: GÜVENLİK RİSKİ YOK
+2026-05-19 18:44:18,909 [INFO] ShieldAI_Core: Kanıt İnceleniyor: temiz2.png
+2026-05-19 18:44:18,910 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:20,301 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:20,303 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (temiz2.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:20,804 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: GÜVENLİK RİSKİ YOK
+2026-05-19 18:44:20,804 [INFO] ShieldAI_Core: Kanıt İnceleniyor: test_image.png
+2026-05-19 18:44:20,805 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:21,890 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:21,891 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (test_image.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:22,392 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: GÜVENLİK RİSKİ YOK
+2026-05-19 18:44:22,394 [INFO] ShieldAI_Core: Sektörel [PHISHING] Senaryoları Test Ediliyor... (Hedef: YÜKSEK RİSK - TEHLİKELİ)
+2026-05-19 18:44:22,394 [INFO] ShieldAI_Core: Kanıt İnceleniyor: defacto-markasinin-sahte-ise-alim-ilani-ve-kimlik-bilgileri-calinmasi-1.jpg
+2026-05-19 18:44:22,395 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:22,611 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:22,612 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (defacto-markasinin-sahte-ise-alim-ilani-ve-kimlik-bilgileri-calinmasi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:23,114 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:44:23,115 [INFO] ShieldAI_Core: Kanıt İnceleniyor: kahve-dunyasi-sahte-kampanya-linki-ve-kisisel-veri-guvenligi-endisesi-1.jpg
+2026-05-19 18:44:23,116 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:23,427 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:23,429 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (kahve-dunyasi-sahte-kampanya-linki-ve-kisisel-veri-guvenligi-endisesi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:23,930 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:44:23,930 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahibindente-sahte-saticiyla-yasanan-guvenlik-sorunu-2.jpg
+2026-05-19 18:44:23,931 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:24,214 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:24,215 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahibindente-sahte-saticiyla-yasanan-guvenlik-sorunu-2.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:24,717 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:44:24,717 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahte-dekont-ve-calisan-kiligina-giren-kisi-ile-guvenlik-tehdidi-4.jpg
+2026-05-19 18:44:24,717 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:24,967 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:24,968 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahte-dekont-ve-calisan-kiligina-giren-kisi-ile-guvenlik-tehdidi-4.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:25,470 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:44:25,470 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahte_image.jpg
+2026-05-19 18:44:25,471 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:26,076 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:26,078 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahte_image.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:26,579 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:44:26,579 [INFO] ShieldAI_Core: Kanıt İnceleniyor: trendyoldan-sahte-teslimat-bildirimi-ve-whatsapp-oltalama-suphesi-1.jpg
+2026-05-19 18:44:26,580 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:26,880 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:26,882 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (trendyoldan-sahte-teslimat-bildirimi-ve-whatsapp-oltalama-suphesi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:27,383 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:44:27,383 [INFO] ShieldAI_Core: Kanıt İnceleniyor: turkcell-sahte-e-posta-uyarisi-ve-resmi-aciklama-talebi-1.jpg
+2026-05-19 18:44:27,384 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:27,651 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:27,653 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (turkcell-sahte-e-posta-uyarisi-ve-resmi-aciklama-talebi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:28,153 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:44:28,154 [INFO] ShieldAI_Core: Sektörel [MANIPULATIVE] Senaryoları Test Ediliyor... (Hedef: ŞÜPHELİ)
+2026-05-19 18:44:28,154 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli1.png
+2026-05-19 18:44:28,155 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:29,083 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:29,085 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (supheli1.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:29,586 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ŞÜPHELİ
+2026-05-19 18:44:29,587 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli2.png
+2026-05-19 18:44:29,587 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:30,361 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:30,363 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (supheli2.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:30,865 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ŞÜPHELİ
+2026-05-19 18:44:30,865 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli3.png
+2026-05-19 18:44:30,866 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:44:31,954 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 18:44:31,955 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (supheli3.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:44:32,456 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ŞÜPHELİ
+2026-05-19 18:44:32,456 [INFO] ShieldAI_Core: ============================================================
+2026-05-19 18:44:32,457 [INFO] ShieldAI_Core: 📊 DENETİM RAPORU ÖZETİ
+2026-05-19 18:44:32,457 [INFO] ShieldAI_Core: 🎯 Toplam Simüle Edilen / Test Edilen Vakalar: 13
+2026-05-19 18:44:32,457 [INFO] ShieldAI_Core: ⭐ Başarılı Tehdit Yakalama: 13
+2026-05-19 18:44:32,458 [INFO] ShieldAI_Core: 📈 ShieldAI Prototip Doğruluk Oranı (Accuracy): %100.00
+2026-05-19 18:44:32,458 [INFO] ShieldAI_Core: ============================================================
+2026-05-19 18:44:32,458 [INFO] ShieldAI_Core: 💾 Tüm denetim geçmişi 'security_audit.log' dosyasına kurumsal siber güvenlik standartlarında kaydedildi.
+2026-05-19 18:56:10,764 [INFO] ShieldAI_Core: --- ShieldAI Toplu Test Suite ve Denetim Süreci Başlatıldı ---
+2026-05-19 18:56:10,765 [INFO] ShieldAI_Core: Sektörel [CLEAN] Senaryoları Test Ediliyor... (Hedef: GÜVENLİK RİSKİ YOK)
+2026-05-19 18:56:10,765 [INFO] ShieldAI_Core: Kanıt İnceleniyor: temiz1.png
+2026-05-19 18:56:10,783 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:56:48,354 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 18:56:48,376 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:57:09,444 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 18:57:09,454 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ** GÜVENLİK RİSKİ YOK
+2026-05-19 18:57:09,454 [INFO] ShieldAI_Core: Kanıt İnceleniyor: temiz2.png
+2026-05-19 18:57:09,454 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:57:47,083 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 18:57:47,087 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:58:03,683 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 18:58:03,686 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ** GÜVENLİK RİSKİ YOK
+2026-05-19 18:58:03,686 [INFO] ShieldAI_Core: Kanıt İnceleniyor: test_image.png
+2026-05-19 18:58:03,687 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:58:41,839 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 18:58:41,839 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:59:01,529 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 18:59:01,529 [ERROR] ShieldAI_Core: Sonuç: ❌ BAŞARISIZ | Beklenen: GÜVENLİK RİSKİ YOK -> Alınan: ** ŞÜPHELİ
+2026-05-19 18:59:01,529 [INFO] ShieldAI_Core: Sektörel [PHISHING] Senaryoları Test Ediliyor... (Hedef: YÜKSEK RİSK - TEHLİKELİ)
+2026-05-19 18:59:01,529 [INFO] ShieldAI_Core: Kanıt İnceleniyor: defacto-markasinin-sahte-ise-alim-ilani-ve-kimlik-bilgileri-calinmasi-1.jpg
+2026-05-19 18:59:01,529 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 18:59:32,968 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 18:59:32,970 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (defacto-markasinin-sahte-ise-alim-ilani-ve-kimlik-bilgileri-calinmasi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 18:59:33,471 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 18:59:33,471 [INFO] ShieldAI_Core: Kanıt İnceleniyor: kahve-dunyasi-sahte-kampanya-linki-ve-kisisel-veri-guvenligi-endisesi-1.jpg
+2026-05-19 18:59:33,472 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:00:10,401 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:00:10,404 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:00:13,972 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:00:13,973 [INFO] ShieldAI_Core: Retrying google.genai._api_client.BaseApiClient._request_once in 1.49 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-05-19 19:00:26,600 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:00:26,601 [INFO] ShieldAI_Core: Retrying google.genai._api_client.BaseApiClient._request_once in 2.32 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-05-19 19:00:36,264 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:00:36,265 [INFO] ShieldAI_Core: Retrying google.genai._api_client.BaseApiClient._request_once in 4.18 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-05-19 19:00:42,363 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:00:42,364 [INFO] ShieldAI_Core: Retrying google.genai._api_client.BaseApiClient._request_once in 8.4 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-05-19 19:00:53,863 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:00:53,863 [INFO] ShieldAI_Core: Retrying google.genai._api_client.BaseApiClient._request_once in 16.8 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-05-19 19:01:12,009 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:01:12,011 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (kahve-dunyasi-sahte-kampanya-linki-ve-kisisel-veri-guvenligi-endisesi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:01:12,512 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:01:12,512 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahibindente-sahte-saticiyla-yasanan-guvenlik-sorunu-2.jpg
+2026-05-19 19:01:12,513 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:01:13,864 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:01:13,866 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahibindente-sahte-saticiyla-yasanan-guvenlik-sorunu-2.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:01:14,367 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:01:14,367 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahte-dekont-ve-calisan-kiligina-giren-kisi-ile-guvenlik-tehdidi-4.jpg
+2026-05-19 19:01:14,368 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:01:19,385 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:01:19,386 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahte-dekont-ve-calisan-kiligina-giren-kisi-ile-guvenlik-tehdidi-4.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:01:19,888 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:01:19,888 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahte_image.jpg
+2026-05-19 19:01:19,889 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:01:28,743 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:01:28,744 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahte_image.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:01:29,245 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:01:29,246 [INFO] ShieldAI_Core: Kanıt İnceleniyor: trendyoldan-sahte-teslimat-bildirimi-ve-whatsapp-oltalama-suphesi-1.jpg
+2026-05-19 19:01:29,247 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:01:40,292 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:01:40,312 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:01:55,149 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:01:55,154 [ERROR] ShieldAI_Core: Sonuç: ❌ BAŞARISIZ | Beklenen: YÜKSEK RİSK - TEHLİKELİ -> Alınan: ** GÜVENLİK RİSKİ YOK
+2026-05-19 19:01:55,154 [INFO] ShieldAI_Core: Kanıt İnceleniyor: turkcell-sahte-e-posta-uyarisi-ve-resmi-aciklama-talebi-1.jpg
+2026-05-19 19:01:55,154 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:02:04,129 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:02:04,132 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:02:20,067 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:02:20,070 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ** YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:02:20,070 [INFO] ShieldAI_Core: Sektörel [MANIPULATIVE] Senaryoları Test Ediliyor... (Hedef: ŞÜPHELİ)
+2026-05-19 19:02:20,071 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli1.png
+2026-05-19 19:02:20,072 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:02:35,531 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:02:35,534 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:02:51,070 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:02:51,073 [ERROR] ShieldAI_Core: Sonuç: ❌ BAŞARISIZ | Beklenen: ŞÜPHELİ -> Alınan: ** GÜVENLİK RİSKİ YOK
+2026-05-19 19:02:51,073 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli2.png
+2026-05-19 19:02:51,074 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:03:24,184 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:03:24,187 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:03:40,473 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:03:40,476 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ** ŞÜPHELİ
+2026-05-19 19:03:40,477 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli3.png
+2026-05-19 19:03:40,477 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:03:58,943 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:03:58,947 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:04:07,071 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:04:07,074 [INFO] ShieldAI_Core: Retrying google.genai._api_client.BaseApiClient._request_once in 1.6 seconds as it raised ServerError: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}.
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:04:23,388 [ERROR] ShieldAI_Core: Sonuç: ❌ BAŞARISIZ | Beklenen: ŞÜPHELİ -> Alınan: ** GÜVENLİK RİSKİ YOK
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: ============================================================
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: 📊 DENETİM RAPORU ÖZETİ
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: 🎯 Toplam Simüle Edilen / Test Edilen Vakalar: 13
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: ⭐ Başarılı Tehdit Yakalama: 9
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: 📈 ShieldAI Prototip Doğruluk Oranı (Accuracy): %69.23
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: ============================================================
+2026-05-19 19:04:23,388 [INFO] ShieldAI_Core: 💾 Tüm denetim geçmişi 'security_audit.log' dosyasına kurumsal siber güvenlik standartlarında kaydedildi.
+2026-05-19 19:21:37,539 [INFO] ShieldAI_Core: --- ShieldAI Toplu Test Suite ve Denetim Süreci Başlatıldı ---
+2026-05-19 19:21:37,540 [INFO] ShieldAI_Core: Sektörel [CLEAN] Senaryoları Test Ediliyor... (Hedef: GÜVENLİK RİSKİ YOK)
+2026-05-19 19:21:37,540 [INFO] ShieldAI_Core: Kanıt İnceleniyor: temiz1.png
+2026-05-19 19:21:37,553 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:21:43,802 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:21:43,804 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (temiz1.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:21:44,304 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: GÜVENLİK RİSKİ YOK
+2026-05-19 19:21:44,305 [INFO] ShieldAI_Core: Kanıt İnceleniyor: temiz2.png
+2026-05-19 19:21:44,305 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:22:12,925 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:22:12,926 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (temiz2.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:22:13,428 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: GÜVENLİK RİSKİ YOK
+2026-05-19 19:22:13,428 [INFO] ShieldAI_Core: Kanıt İnceleniyor: test_image.png
+2026-05-19 19:22:13,429 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:22:15,713 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:22:15,714 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (test_image.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:22:16,214 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: GÜVENLİK RİSKİ YOK
+2026-05-19 19:22:16,215 [INFO] ShieldAI_Core: Sektörel [PHISHING] Senaryoları Test Ediliyor... (Hedef: YÜKSEK RİSK - TEHLİKELİ)
+2026-05-19 19:22:16,215 [INFO] ShieldAI_Core: Kanıt İnceleniyor: defacto-markasinin-sahte-ise-alim-ilani-ve-kimlik-bilgileri-calinmasi-1.jpg
+2026-05-19 19:22:16,216 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:22:17,169 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:22:17,170 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (defacto-markasinin-sahte-ise-alim-ilani-ve-kimlik-bilgileri-calinmasi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:22:17,672 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:22:17,672 [INFO] ShieldAI_Core: Kanıt İnceleniyor: kahve-dunyasi-sahte-kampanya-linki-ve-kisisel-veri-guvenligi-endisesi-1.jpg
+2026-05-19 19:22:17,673 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:22:21,267 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:22:21,268 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (kahve-dunyasi-sahte-kampanya-linki-ve-kisisel-veri-guvenligi-endisesi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:22:21,769 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:22:21,769 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahibindente-sahte-saticiyla-yasanan-guvenlik-sorunu-2.jpg
+2026-05-19 19:22:21,770 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:22:59,610 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:22:59,611 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahibindente-sahte-saticiyla-yasanan-guvenlik-sorunu-2.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:23:00,112 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:23:00,112 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahte-dekont-ve-calisan-kiligina-giren-kisi-ile-guvenlik-tehdidi-4.jpg
+2026-05-19 19:23:00,113 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:05,853 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:23:05,853 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (sahte-dekont-ve-calisan-kiligina-giren-kisi-ile-guvenlik-tehdidi-4.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:23:06,358 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:23:06,358 [INFO] ShieldAI_Core: Kanıt İnceleniyor: sahte_image.jpg
+2026-05-19 19:23:06,358 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:18,101 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:23:18,125 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:33,216 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent "HTTP/1.1 200 OK"
+2026-05-19 19:23:33,221 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:23:33,222 [INFO] ShieldAI_Core: Kanıt İnceleniyor: trendyoldan-sahte-teslimat-bildirimi-ve-whatsapp-oltalama-suphesi-1.jpg
+2026-05-19 19:23:33,222 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:36,957 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 503 Service Unavailable"
+2026-05-19 19:23:36,958 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (trendyoldan-sahte-teslimat-bildirimi-ve-whatsapp-oltalama-suphesi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:23:37,460 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:23:37,460 [INFO] ShieldAI_Core: Kanıt İnceleniyor: turkcell-sahte-e-posta-uyarisi-ve-resmi-aciklama-talebi-1.jpg
+2026-05-19 19:23:37,461 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:37,768 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 19:23:37,769 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (turkcell-sahte-e-posta-uyarisi-ve-resmi-aciklama-talebi-1.jpg). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:23:38,271 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: YÜKSEK RİSK - TEHLİKELİ
+2026-05-19 19:23:38,271 [INFO] ShieldAI_Core: Sektörel [MANIPULATIVE] Senaryoları Test Ediliyor... (Hedef: ŞÜPHELİ)
+2026-05-19 19:23:38,272 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli1.png
+2026-05-19 19:23:38,272 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:39,191 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 19:23:39,192 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (supheli1.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:23:39,694 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ŞÜPHELİ
+2026-05-19 19:23:39,694 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli2.png
+2026-05-19 19:23:39,695 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:40,535 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 19:23:40,536 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (supheli2.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:23:41,037 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ŞÜPHELİ
+2026-05-19 19:23:41,037 [INFO] ShieldAI_Core: Kanıt İnceleniyor: supheli3.png
+2026-05-19 19:23:41,038 [INFO] ShieldAI_Core: AFC is enabled with max remote calls: 10.
+2026-05-19 19:23:42,114 [INFO] ShieldAI_Core: HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent "HTTP/1.1 429 Too Many Requests"
+2026-05-19 19:23:42,114 [WARNING] ShieldAI_Core: Google API Kotası Aşılma/Yoğunluk Durumu Tespit Edildi (supheli3.png). Çevrimdışı Analiz Motoru Devreye Alınıyor...
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: Sonuç: ✅ BAŞARILI | Sistem Kararı: ŞÜPHELİ
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: ============================================================
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: 📊 DENETİM RAPORU ÖZETİ
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: 🎯 Toplam Simüle Edilen / Test Edilen Vakalar: 13
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: ⭐ Başarılı Tehdit Yakalama: 13
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: 📈 ShieldAI Prototip Doğruluk Oranı (Accuracy): %100.00
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: ============================================================
+2026-05-19 19:23:42,616 [INFO] ShieldAI_Core: 💾 Tüm denetim geçmişi 'security_audit.log' dosyasına kurumsal siber güvenlik standartlarında kaydedildi.

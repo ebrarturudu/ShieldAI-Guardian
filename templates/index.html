@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldAI: E-Commerce & Finance Guard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <style>
+        body { 
+            background-color: #090d16; 
+            color: #f8fafc; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, #090d16 70%);
+        }
+        .navbar-brand-custom {
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #38bdf8 !important;
+        }
+        .main-card { 
+            background: rgba(30, 41, 59, 0.7); 
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            border-radius: 16px; 
+        }
+        .btn-shield { 
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            color: white; 
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+        .btn-shield:hover { 
+            background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+            color: white; 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+        }
+        .report-container {
+            background: #0f172a;
+            border-radius: 12px;
+            border-left: 5px solid #38bdf8;
+            padding: 25px;
+        }
+        .report-content table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+            border-collapse: collapse;
+        }
+        .report-content th, .report-content td {
+            padding: 12px;
+            border: 1px solid #334155;
+        }
+        .report-content th { background-color: #1e293b; color: #38bdf8; }
+        .report-content h2 { font-size: 1.5rem; color: #38bdf8; margin-top: 20px; font-weight: 600; }
+        .report-content h3 { font-size: 1.25rem; color: #f43f5e; margin-top: 15px; }
+        .report-content ul { padding-left: 20px; }
+        .report-content li { margin-bottom: 8px; }
+        
+        /* Yukleme Animasyonu */
+        .loading-spinner { display: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-transparent py-4">
+        <div class="container justify-content-center">
+            <span class="navbar-brand navbar-brand-custom fs-3">
+                <i class="fa-solid fa-shield-halved me-2"></i>SHIELDAI GUARDIAN
+            </span>
+        </div>
+    </nav>
+
+    <div class="container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                
+                <div class="card main-card p-4 p-md-5 shadow-lg mb-4">
+                    <h4 class="text-center mb-4 fw-light">E-Ticaret & Finans Güvenliği Analiz Modülü</h4>
+                    
+                    <form action="/" method="POST" enctype="multipart/form-data" onsubmit="showLoading()">
+                        <div class="mb-4">
+                            <label for="file" class="form-label d-flex justify-content-between">
+                                <span class="fw-bold"><i class="fa-regular fa-image me-2"></i>Şüpheli Ekran Görüntüsü</span>
+                                <span class="text-muted small">PNG, JPG veya JPEG</span>
+                            </label>
+                            <input type="file" class="form-control bg-dark text-white border-secondary py-2.5" id="file" name="file" required>
+                        </div>
+                        <button type="submit" class="btn btn-shield w-100 py-3 fs-5" id="submitBtn">
+                            <i class="fa-solid fa-wand-magic-sparkles me-2"></i> Tarama ve Analizi Başlat
+                        </button>
+                    </form>
+
+                    <div class="loading-spinner text-center mt-4" id="spinner">
+                        <div class="spinner-border text-info mb-2" role="status"></div>
+                        <p class="text-info mb-0 small animate__animated animate__pulse animate__infinite">
+                            <i class="fa-solid fa-microchip me-1"></i> Gözcü ve Analist Ajanlar senkronize ediliyor, lütfen bekleyin...
+                        </p>
+                    </div>
+                </div>
+
+                {% if rapor %}
+                <div class="card main-card p-4 p-md-5 shadow-lg mb-5">
+                    <div class="d-flex align-items-center mb-4 border-bottom border-secondary pb-3">
+                        <i class="fa-solid fa-square-poll-horizontal text-info fs-3 me-3"></i>
+                        <h3 class="m-0 text-info fw-bold">Yapay Zeka Denetim Raporu</h3>
+                    </div>
+                    
+                    {% if gorsel %}
+                    <div class="text-center mb-4 bg-dark p-3 rounded border border-secondary">
+                        <p class="text-muted small text-start mb-2"><i class="fa-solid fa-paperclip me-1"></i>İncelenen Kanıt Görseli:</p>
+                        <img src="{{ gorsel }}" class="img-fluid rounded shadow-sm" style="max-height: 280px; object-fit: contain;" alt="Analiz Edilen Görsel">
+                    </div>
+                    {% endif %}
+
+                    <div class="report-container">
+                        <div id="markdown-target" class="report-content"></div>
+                    </div>
+                </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const rawMarkdown = `{{ rapor | safe if rapor else '' }}`;
+            if (rawMarkdown) {
+                document.getElementById('markdown-target').innerHTML = marked.parse(rawMarkdown);
+            }
+        });
+
+        function showLoading() {
+            document.getElementById('submitBtn').disabled = true;
+            document.getElementById('spinner').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

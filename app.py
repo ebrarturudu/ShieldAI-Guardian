@@ -1,67 +1,63 @@
 import os
+from flask import Flask, render_template, request, redirect, url_for
 from dotenv import load_dotenv
 from google import genai
 from PIL import Image
+import agent_logic
 
 load_dotenv()
+
+app = Flask(__name__)
+
+UPLOAD_FOLDER = os.path.join('static', 'uploads')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
-SISTEM_TALIMATI = """
-Sen ShieldAI siber güvenlik uzmanısın. Analizlerini bir rapor formatında sunmalısın.
-Lütfen şu yapıyı kullan:
+def tam_analiz_baslat(gorsel_yolu):
+    try:
+        img = Image.open(gorsel_yolu)
+    except FileNotFoundError:
+        return "Hata: Görsel dosyası bulunamadı."
 
-# 🛡️ ShieldAI Güvenlik Analiz Raporu
+    try:
+        gözcü_cevabı = client.models.generate_content(
+            model="gemini-flash-latest",
+            contents=["""Bu bir e-ticaret sitesi veya ilan görseli. 
+            Görseldeki tüm metinleri, logoları, fiyatları ve tasarım hatalarını ham veri olarak listele.""", img]
+        )
+        ham_veri = gözcü_cevabı.text
+    except Exception as e:
+        return "⚠️ Şu anda Google sunucuları aşırı yoğun olduğu için Gözcü Ajan yanıt veremedi. Lütfen birkaç saniye sonra tekrar deneyin."
 
-## 📊 Genel Risk Özeti
-**Risk Skoru:** [0-100 arası bir sayı] / 100
-**Durum:** [Güvenli / Şüpheli / Tehlikeli]
+    nihai_rapor = agent_logic.guvenlik_karari_ver(ham_veri)
+    return nihai_rapor
 
-## 🔍 Tespit Edilen Bulgular
-| Kategori | Açıklama | Şüphe Düzeyi |
-| :--- | :--- | :--- |
-| Dark Pattern | [Bulunan teknik] | [Düşük/Orta/Yüksek] |
-| DeepTrust | [Görsel/Satıcı analizi] | [Düşük/Orta/Yüksek] |
-
-## 💡 Kullanıcıya Öneriler
-- [Yapılması gereken ilk adım]
-- [Dikkat edilmesi gereken detay]
-"""
-
-def analiz_et(gorsel_yolu):
-    img = Image.open(gorsel_yolu)
+@app.route("/", methods=["GET", "POST"])
+def index():
+    rapor = None
+    gorsel_url = None
     
-    response = client.models.generate_content(
-        model="gemini-flash-latest",
-        config={'system_instruction': SISTEM_TALIMATI},
-        contents=["Bu sayfayı analiz et.", img]
-    )
-    return response.text
-
+    if request.method == "POST":
+        if 'file' not in request.files:
+            return redirect(request.url)
+        file = request.files['file']
+        if file.filename == '':
+            return redirect(request.url)
+            
+        if file:
+         
+            dosya_yolu = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+            file.save(dosya_yolu)
+            
+            gorsel_url = url_for('static', filename=f'uploads/{file.filename}')
+            
+            rapor = tam_analiz_baslat(dosya_yolu)
+            
+    return render_template("index.html", rapor=rapor, gorsel=gorsel_url)
 
 if __name__ == "__main__":
-    print("Analiz yapılıyor...")
-    print(analiz_et("sahte_image.jpg"))
-
-    def shield_ai_karar_merkezi(gorsel_yolu):
-        print(f"\n--- {gorsel_yolu} İçin İşlem Başlatıldı ---")
-        
-        
-        rapor = analiz_et(gorsel_yolu)
-        
-        
-        try:
-            skor_satiri = [s for s in rapor.split('\n') if "Risk Skoru" in s][0]
-            skor = int(''.join(filter(str.isdigit, skor_satiri.split('/')[0])))
-        except:
-            skor = 0 
-        print(f"Sistem Kararı: Risk Puanı {skor}")
-        
-        if skor >= 80:
-            print("🚨 ACİL DURUM: Bu site kesinlikle dolandırıcı! Kullanıcı engelleniyor.")
-        elif skor >= 40:
-            print("⚠️ UYARI: Şüpheli durumlar var. Kullanıcıya dikkatli olması söyleniyor.")
-        else:
-            print("✅ GÜVENLİ: Belirgin bir tehdit bulunamadı.")
-            
-        return rapor
-
+    
+    app.run(debug=True)

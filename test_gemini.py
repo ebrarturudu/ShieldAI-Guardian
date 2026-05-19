@@ -7,10 +7,8 @@ load_dotenv()
 
 client = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
 
-# 1. Resmi bilgisayardan oku
 img = Image.open("test_image.png")
 
-# 2. Gemini'ye hem yazı hem resim gönder
 response = client.models.generate_content(
     model="gemini-flash-latest",
     contents=["Bu bir e-ticaret sitesi ekran görüntüsü mü? Eğer öyleyse, güvenli görünüyor mu? Kısaca analiz et.", img]
